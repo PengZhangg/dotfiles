@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export WHITE=0xffffffff
-
 # -- nord theme --
 export BAR_COLOR=0xff2f333e
 export ITEM_BG_COLOR=0xff3f4150
