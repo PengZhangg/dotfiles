@@ -15,9 +15,6 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
-# Sets zsh theme - overwritten by p10k
-ZSH_THEME="robbyrussell"
-
 # Plugins 
 plugins=(
 	git
@@ -41,8 +38,6 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=$PATH:/Users/pengzhang/.spicetify
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /Users/pengzhang/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -50,7 +45,6 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Keybindings
-bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
@@ -75,9 +69,21 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls="ls --color"
-alias c='clear'
 alias n='nvim'
-
+alias c='clear'
 
 # Shell intergrations
 eval "$(fzf --zsh)"
+
+# set pyenv env
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# enable vim mode
+bindkey -v
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.3
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+typeset -U PATH path
+
