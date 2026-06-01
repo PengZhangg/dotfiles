@@ -1,0 +1,19 @@
+# font configuration
+font-family = MesloLGSNFM-Regular
+font-size = 13
+font-thicken = true
+
+# set theme
+theme = Nord
+
+# cursor configuration
+cursor-style = block
+cursor-style-blink = false
+
+# set opacity
+background-opacity = 0.97
+background-blur-radius = 13
+
+# custom icon
+macos-icon = custom
+macos-custom-icon = ~/.config/ghostty/nord.icns
