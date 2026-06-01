@@ -1,3 +1,12 @@
 # dotfiles
-Personal MacOS config
+
+Personal macOS config
+
+- **shell** — zsh + p10k
+- **terminal** — ghostty + tmux
+- **editor** — nvim
+- **bar** — sketchybar + borders
+- **git** — gitconfig, global gitignore, delta diffs
+- **tools** — pyenv, fzf, zoxide, ripgrep, lsd
+
 <img width="1800" alt="SCR-20240617-tarn" src="https://github.com/PengZhangg/dotfiles/assets/122496391/ef27b095-ee92-432c-b7fa-70353f1398b7">
